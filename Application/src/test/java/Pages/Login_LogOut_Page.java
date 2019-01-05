@@ -6,9 +6,13 @@ import HelpingPages.GlobalizedPage;
 
 public class Login_LogOut_Page extends GlobalizedPage{
 
+//	####################### PAGE ELEMENTS		
 	public By CONTINUE_WITHOUT_LOGIN = By.cssSelector("#ModalNotLogInButton");
 	public By LOGOUT_PAGE_LOGIN_BUTTON = By.cssSelector("[type='button']");
 	
+//	####################### PAGE TEXTS
+	
+//	####################### Methods
 	public Login_LogOut_Page LogIn_To_BOSS() {
 		lb.Wait_For_Element(CP.CONSENT_MODAL);
 		lb.Wait_For_Element(CP.MODAL_HEADER_ELEMENT);

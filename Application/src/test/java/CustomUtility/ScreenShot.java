@@ -16,15 +16,14 @@ import HelpingPages.GlobalizedPage;
 
 public class ScreenShot extends GlobalizedPage{
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		// DO NOT TOUCH THIS LIBRARY
+
+		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 	public String Create_ScreenShot_Name(Description des) {
 		String Final_ScreenShot_Class_Name = null;
 		String Final_ScreenShot_Method_Name = null;
@@ -35,7 +34,7 @@ public class ScreenShot extends GlobalizedPage{
 			System.out.println("Error " + e.getMessage());
 			e.getStackTrace();
 		}
-		return "Class_Name (" + Final_ScreenShot_Class_Name + ") Methods_Name (" + Final_ScreenShot_Method_Name;
+		return "Class_Name (" + Final_ScreenShot_Class_Name + ") Test_Name (" + Final_ScreenShot_Method_Name;
 	}
 	
 	// ########## ScreenShot

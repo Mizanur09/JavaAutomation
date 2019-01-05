@@ -49,7 +49,6 @@ public class Request_Forms extends GlobalizedPage{
 	public By MILITARY_RESOURCE_START_TIME = By.cssSelector("#ServiceRequests_2__serviceStartTime");
 	public By MILITARY_RESOURCE_END_TIME = By.cssSelector("#ServiceRequests_2__serviceEndTime");
 
-	
 //	Child and Youth Behavioral Counselor			
 	public By CHILDYOUTH_COUNSELOR_FIELD_LABEL = By.cssSelector("#ServiceCategoryList h3:nth-child(6)");
 	public By CHILDYOUTH_COUNSELING_PRESENTATION_CHECKBOX = By.cssSelector("#ServiceRequests_3__serviceCategoryYesNo");
@@ -180,10 +179,10 @@ public class Request_Forms extends GlobalizedPage{
 	public By SUBMIT_REQUEST_BUTTON = By.cssSelector("#requestSubmitBtn");
 	
 	
+//	####################### PAGE TEXTS
+	public String Test ="";
 	
-//	############################################################
-//							METHODS
-//	############################################################
+//	####################### Methods
 	
 
 

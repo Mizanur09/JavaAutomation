@@ -52,7 +52,6 @@ public class Library extends GlobalizedPage {
 
 	public WebDriver Start_FireFox_Browser(String URL) {
 		try {
-//			System.setProperty("webdriver.gecko.driver","C:/Users/mizanur.rahman/Desktop/Personal/Application_and_softwares/Drivers/Geckodriver_dir/geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
@@ -69,7 +68,6 @@ public class Library extends GlobalizedPage {
 
 	public WebDriver Start_Chrome_Browser(String URL) {
 		try {
-//			System.setProperty("webdriver.chrome.driver","C:/Users/mizanur.rahman/Desktop/Personal/Application_and_softwares/Drivers/Chrome_2.45/chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -86,8 +84,7 @@ public class Library extends GlobalizedPage {
 
 	public WebDriver Start_Internet_Explorar_Browser(String URL) {
 		try {
-//			System.setProperty("webdriver.ie.driver","C:/Users/mizanur.rahman/Desktop/Personal/Application_and_softwares/Drivers/InterNetWxplorer/IEDriverServer.exe");
-			WebDriverManager.iedriver().setup();
+//			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -103,7 +100,6 @@ public class Library extends GlobalizedPage {
 
 	public WebDriver Start_Microsoft_Edge_Browser(String URL) {
 		try {
-			System.setProperty("webdriver.edge.driver",	"C:/Users/mizanur.rahman/Desktop/Personal/Application_and_softwares/Drivers/MicrosoftEdge/MicrosoftWebDriver.exe");
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			driver.manage().window().maximize();
@@ -158,7 +154,6 @@ public class Library extends GlobalizedPage {
 
 	// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	// Bowser Certificates
-
 	public void Select_Certificate_Chrome_Browser(String URL) throws IOException {
 		URL url = new URL(URL);
 		Thread certSelectionThread = null;
@@ -184,27 +179,24 @@ public class Library extends GlobalizedPage {
 		certSelectionThread.start();
 		driver.navigate().to(url);
 	}
-
 	// #####################################################################################################################
-
-	public WebElement GetElement(By by) {
-		return driver.findElement(by);
-	}
-
-	// $$$$$$$$$$$$$$$$$$$?
+	
 	/*
-	 * Example GetElement("input[id^='First part of the ID']")); Example
+	 * @param Example GetElement("input[id^='First part of the ID']")); Example
 	 * GetElement("input[id$='last part of the ID']")); Example
 	 * GetElement("input[id*='last part of the ID']")); Example
 	 * GetElement(#ID);Select the ID Example GetElement(.class); Select the class
-	 * Example GetElement("ul[li='Attribute']+[p='Attribute']") adding all the
-	 * Attribute one after other Example GetElement("ul>li"); immediate child
-	 * Example GetElement("ul li"); one of the element under the parent Example
-	 * GetElement("html>div:nth-child(child number)"); It is the second child of a
-	 * parent Example GetElement("p:nth-of-typ(child number)"); Select the second
-	 * child of a parent
+	 * Example GetElement("ul[li='Attribute']+[p='Attribute']") adding all the Attribute one after other Example GetElement("ul>li"); immediate child
+	 * Example GetElement("ul li"); one of the element under the parent 
+	 * Example GetElement("html>div:nth-child(child number)"); It is the second child of a parent 
+	 * Example GetElement("p:nth-of-typ(child number)"); Select the second child of a parent
+	 * Example GetElement( Any xpath);
+	 * Example GetElement(id,className,linkText,tagName,Name and partialLinkText) any one should do the job
 	 */
-
+	public WebElement GetElement(By by) {
+		return driver.findElement(by);
+	}
+	
 	public void Click_Element(By by) {
 		High_Light_Element(GetElement(by));
 		Fluent_Wait(by).click();
@@ -228,8 +220,6 @@ public class Library extends GlobalizedPage {
 			for (int i = 0; i < Entirepage.size(); i++) {
 				WebElement allElement = Entirepage.get(i);
 				String value = allElement.getText();
-//				System.out.println("Value of the page elements is ====> " + value);
-
 				if (value.equalsIgnoreCase(elementName)) {
 					allElement.click();
 					break;
@@ -248,8 +238,6 @@ public class Library extends GlobalizedPage {
 			for (int i = 0; i < page.size(); i++) {
 				WebElement allElement = page.get(i);
 				String value = allElement.getAttribute(Attribute);
-				// System.out.println("Value of of the given Attribute is ====> " + value);
-
 				if (value.equalsIgnoreCase(AttributeValue)) {
 					allElement.click();
 					break;
@@ -260,9 +248,11 @@ public class Library extends GlobalizedPage {
 			e.getStackTrace();
 		}
 	}
-	
 //#############################################
 
+	/*
+	 * Should only be able to Print anything with string... 
+	 */
 	public void Print(String text) {
 		System.out.println(text);
 	}
@@ -497,7 +487,6 @@ public class Library extends GlobalizedPage {
 			System.out.println(entry.getLevel()+" "+entry.getMessage());
 		}
 	}
-	
 
 	// #### Mouse Over
 	public void Move_Mouse_To_Elemnt(By by) {
@@ -512,8 +501,7 @@ public class Library extends GlobalizedPage {
 		}
 	}
 
-	/*
-	 * Table search with (Table element, Row Number, Column Number Will Return Text
+	/* Table search with (Table element, Row Number, Column Number Will Return Text
 	 * from the table
 	 */
 	// ########### Table search

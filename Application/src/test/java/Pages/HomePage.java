@@ -6,6 +6,7 @@ import HelpingPages.GlobalizedPage;
 
 public class HomePage extends GlobalizedPage{
 
+//	####################### PAGE ELEMENTS		
 	public By HOMEPAGE_HEADER = By.cssSelector("h2:nth-child(1)");
 	public By PAGE_LOGO = By.cssSelector("#logo-link");
 	public By ANONYMOUS_USER = By.cssSelector(".navbar-right>li>p");
@@ -74,8 +75,7 @@ public class HomePage extends GlobalizedPage{
 												+ "Not sure what support materials are offered?"
 														+ "Find out what is available.";	
 	
-//#########################################################################################################################################
-	
+//	####################### Methods
 	public HomePage Go_To_Home_Page() {
 		CP.Select_I_Consent_Agree();
 		lb.Click_Element(CP.CONTINUE_WITHOUT_LOGIN);
@@ -125,8 +125,7 @@ public class HomePage extends GlobalizedPage{
 		lb.Wait_For_Element(CURRENT_LOGGED_IN_USER_PROFILE);
 		String getFirstName = lb.GetElement(CURRENT_LOGGED_IN_USER_PROFILE).getText().split(" ")[2];
 		String getlastName = lb.GetElement(CURRENT_LOGGED_IN_USER_PROFILE).getText().split(" ")[3];
-		String FullName = getFirstName+" "+getlastName;
-		return FullName;
+		return getFirstName+" "+getlastName;
 	  }
 	
 	public HomePage Verify_All_Management_Field_Are_Present() {

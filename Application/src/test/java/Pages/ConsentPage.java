@@ -6,7 +6,8 @@ import HelpingPages.GlobalizedPage;
 
 
 public class ConsentPage extends GlobalizedPage{
-	
+
+//	####################### PAGE ELEMENTS	
 	public By CONSENT_MODAL = By.cssSelector("#Div_LogInConfirmation_Modal");
 	public By MODAL_HEADER_ELEMENT = By.cssSelector("#Div_LogInConfirmation_Modal .modal-header");
 	public By DO_NOT_AGREE = By.cssSelector("[aria-label='I do not agree and wish to leave the site.']");
