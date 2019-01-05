@@ -85,7 +85,7 @@ public class Test02_Continue_WithOut_login_HomePage extends GlobalizedPage {
 		lb.Click_Element(HP.FINDOUT_MILITARY_ONESOURCE_PROVIDER_TOOLS_LINK);
 		lb.Switch_To_Tab("Military OneSource Products");
 		lb.Expected_Page_Header("PRODUCTS");
-		lb.Close_Browser();
+		dl.Close_Browser();
 		lb.Switch_Back_To_Main_Window(GetMainWindow);
 		lb.Element_ExptectedText(HP.HOMEPAGE_HEADER, HP.HOMEPAGE_HEADER_TEXT);
 	}
