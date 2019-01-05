@@ -82,7 +82,7 @@ public class DriverUtility extends GlobalizedPage{
 			driver.manage().deleteAllCookies();
 			driver.navigate().to(URL);
 		} catch (Exception e) {
-			lb.lb.Print("Error:" + e.getMessage());
+			lb.Print("Error:" + e.getMessage());
 			e.getStackTrace();
 		}
 		return driver;
